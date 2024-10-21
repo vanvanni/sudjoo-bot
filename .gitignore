@@ -31,3 +31,6 @@ vendor/
 # Project specific
 storage/
 tmp/
+
+# Project config
+config.yml
