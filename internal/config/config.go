@@ -8,7 +8,8 @@ import (
 )
 
 type Config struct {
-	Token string `yaml:"token"`
+	Token    string            `yaml:"token"`
+	Channels map[string]string `yaml:"channels"`
 }
 
 var instance *Config

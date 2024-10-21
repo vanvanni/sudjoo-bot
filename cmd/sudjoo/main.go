@@ -1,8 +1,7 @@
 package main
 
 import (
-	"fmt"
-
+	"github.com/bwmarrin/discordgo"
 	"github.com/vanvanni/sudjoo/internal/config"
 	"github.com/vanvanni/sudjoo/internal/logger"
 )
@@ -10,6 +9,7 @@ import (
 func main() {
 	config := config.GetConfig()
 
-	logger.Info("Hi!")
-	fmt.Println(config)
+	logger.Info("Getting sudo permisions.")
+	d, _ := discordgo.New("Bot " + config.Token)
+	d.ChannelMessageSend(config.Channels["NT_PLAY"], "Boo!")
 }
